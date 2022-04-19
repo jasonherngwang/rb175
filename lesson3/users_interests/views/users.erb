@@ -1,0 +1,11 @@
+<h2>Users and Interests</h2>
+
+<div>
+  <ul>
+    <% @users.each do |user, info| %>
+      <li>
+        <a href="/users/<%= user %>"><%= user %></a>
+      </li>
+    <% end %>
+  </ul>
+</div>

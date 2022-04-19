@@ -19,7 +19,7 @@ def parse_request(request_line)
 
     http_method, path_and_params, http_version = request_line.split
     path, params = path_and_params.split('?')
-    params = params.split('&').map { |param| param.split('=') }.to_h
+    params = (params || '').split('&').map { |param| param.split('=') }.to_h
     
     [http_method, path, params, http_version]
 end
